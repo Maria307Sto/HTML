@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8">
+<html>
+<head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-60513520-3');
+</script>
+<!-- Page-level ads  START -->
+<!-- Page-level ads  END -->
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Объём конуса</title>
+  <meta content="Объём конуса.">
+  <meta name="robots" content="ALL">
+  <meta name="description" content="Программа для вычисления объёма конуса.">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <script type="text/javascript">
+      var ro_val = 4;
+      var local = 1;//ru        
+      // This function creates an asynchronous call to the service
+      function makeCall(operation) {
+          //ro_val
+          if (document.getElementById("accuracy").selectedIndex == 0) { ro_val = 1; }
+          else if (document.getElementById("accuracy").selectedIndex == 1) { ro_val = 2; }
+          else if (document.getElementById("accuracy").selectedIndex == 2) { ro_val = 3; }
+          else if (document.getElementById("accuracy").selectedIndex == 3) { ro_val = 4; }
+          else if (document.getElementById("accuracy").selectedIndex == 4) { ro_val = 5; }
+          else if (document.getElementById("accuracy").selectedIndex == 5) { ro_val = 6; }
+          else if (document.getElementById("accuracy").selectedIndex == 6) { ro_val = 7; }
+          ///
+          var RadiusR = parseFloat(document.getElementById("num1").value.replace(/\,/g, '.'));
+          if (isNaN(RadiusR)) {
+              alert('Введенное значение для  радиуса r  = "' + document.getElementById("num1").value + '" не является числом.\nВычисления невозможны.');
+              return false;
+          }
+          var HeightH = parseFloat(document.getElementById("num2").value.replace(/\,/g, '.'));
+          if (isNaN(HeightH)) {
+              alert('Введенное значение высоты h  = "' + document.getElementById("num2").value + '" не является числом.\nВычисления невозможны.');
+              return false;
+          }  
+          // Create HTTP request
+          var xmlHttp;
+          try {
+              xmlHttp = new XMLHttpRequest();
+          }
+          catch (e) {
+              try {
+                  xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+              } catch (e) {
+                  try {
+                      xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                  } catch (e) {
+                      alert("This sample only works in browsers with AJAX support");
+                      return false;
+                  }
+              }
+          }
+          // Build the operation URL
+          var url = "rect_json.svc/";
+          url = url + operation;
+          // Build the body of the JSON message
+          var body = '{"RadiusR":';
+          body = body + document.getElementById("num1").value.replace(/\,/g, '.') + ',"HeightH":';
+          body = body + document.getElementById("num2").value.replace(/\,/g, '.') + ',"ro_val":';
+          body = body + ro_val.toString() + ',"local":';
+          body = body + local.toString() + '}';
+          // Send the HTTP request
+          xmlHttp.open("POST", url, true);
+          xmlHttp.setRequestHeader("Content-type", "application/json");
+          xmlHttp.send(body);
+      }
+         </script>
+<style type="text/css">
+       #result
+        {
+            width: 250px;
+            height: 80px;
+        }
+        #btnDo
+        {
+            width: 130px;
+            height: 24px;
+        }
+        #num1
+        {
+            width: 250px;
+            height: 20px;
+        }   
+        #num2
+        {
+            width: 250px;
+            height: 20px;
+        }         
+       </style>
+</head>
+          <tr>
+           &nbsp;&nbsp; </font>
+                Объём конуса&nbsp; &nbsp;
+<font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp; </font>
+            <script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+            <script type="text/javascript" src="https://mnogoformul.ru/wp-content/uploads/2015/10/KONUS.png"></script><!-- AddThis Button END --></td>
+          </tr>
+          <tr>
+            <td height="100%" valign="top">
+            <table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td class="body_txt" style="vertical-align: top; height: 100%;">
+                  <p>
+<!-- Ads TOP BEGIN -->
+<!-- Ads TOP END -->
+                      <br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Программа
+предназначена для вычисления объема
+конуса, который является пространственной фигурой.</font></p>
+                      <p>
+                          <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Конус
+- это геометрическое тело, которое образовано
+вращением прямоугольного треугольника около одного из его катетов.</font></p>
+                      <p>
+                          <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img style="width: 89px; height: 102px;" alt="Объём конуса" title="Объём конуса" src="pics/cone.JPG"><br>
+Объем
+конуса равен одной третьей части произведения
+высоты конуса h на площадь основания конуса.</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;</font></p>
+                      <p>
+                          <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Площадь основания конуса можно определить по следующей формуле:</font></p>
+                      <p>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img style="width: 70px; height: 22px;" alt="Площадь основания конуса" title="Площадь основания конуса" src="pics/volume-of-cone_01.gif"> &nbsp; &nbsp; &nbsp;<br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">где
+&nbsp;</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">r</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> -&nbsp;</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">радиус
+основания конуса.</font></p>
+                      <p>
+                          <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Тогда формулу
+для вычисления объема конуса можно записать в следующем виде:
+&nbsp;&nbsp;</font></p>
+                      <p>
+                          <font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  <img style="width: 170px; height: 42px;" alt="Объём конуса" title="Объём конуса" src="pics/volume-of-cone_02.gif"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<br>
+где
+&nbsp;h - высота конуса.&nbsp; &nbsp; </font> </p>
+                      <p>
+                          <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Чтобы
+вычислить объём
+конуса,&nbsp;введите&nbsp;значение радиуса
+основания конуса r и
+значение высоты
+конуса h и
+нажмите
+кнопку "ВЫЧИСЛИТЬ".</font></p>
+                      <p>
+                          <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Исходные
+данные и
+результат вычислений можно скопировать в буфер обмена для дальнейшего
+использования в других приложениях.</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>
+<!-- Ads MIDDLE1 PAGE BEGIN -->
+<!-- Yandex.RTB R-A-218719-8 -->
+<div id="yandex_rtb_R-A-218719-8"></div>
+<script type="text/javascript">
+    (function (w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function () {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-218719-8",
+                renderTo: "yandex_rtb_R-A-218719-8",
+                horizontalAlign: false,
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+<br />
+<!-- Ads MIDDLE1 PAGE END --> 
+</p>
+                      <table cellpadding="2" cellspacing="2" style="text-align: left; width: 100%">
+                          <tr>
+                              <td align="left" style="width: 25%" valign="middle"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Радиус r =</font></td>
+                              <td style="width: 75%">
+                                  <input id="num1" " /&gt;&lt;font face=" arial,="" helvetica,="" sans-serif"="" size="2" style="text-align: left" type="text" value="10" verdana,="" /></td>
+                          </tr>
+                          <tr>
+                              <td align="left" style="width: 25%" valign="middle"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Высота h =</font></td>
+                              <td style="width: 75%">
+                                  <input id="num2" " /&gt;&lt;font face=" arial,="" helvetica,="" sans-serif"="" size="2" style="text-align: left" type="text" value="5" verdana,="" /></td>
+                          </tr>
+                          <tr>
+                              <td align="left" style="width: 25%" valign="middle">&nbsp;</td>
+                              <td style="width: 75%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" style="text-align: left">
+                                  <select id="accuracy" name="D1">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option selected="">4</option>
+                                      <option>5</option>
+                                      <option>6</option>
+                                      <option>7</option>
+                                  </select>&nbsp;(Количество знаков после запятой в результате вычислений)</font></td>
+                          </tr>
+                          <tr>
+                              <td align="left" style="width: 25%" valign="middle"></td>
+                              <td style="width: 75%">
+                                  <input id="btnDo" onclick="return makeCall('GeomVolumeCone');" type="button" value="ВЫЧИСЛИТЬ" /></td>
+                          </tr>
+                          <tr>
+                              <td align="left" style="width: 25%" valign="middle"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Результат =</font> </td>
+                              <td style="width: 75%">
+                                  <textarea id="result" cols="2" name="S1" rows="1"></textarea>&nbsp;&nbsp; <font face="Verdana, Arial, Helvetica, sans-serif" size="2" style="text-align: left">&nbsp; </font></td>
+                          </tr>
+                      </table>
+                       <p>&nbsp;<br>
+                  </p>
+                  </td>
+                  <td style="height: 578px;" bgcolor="#efefef" valign="top">
+                  <table style="width: 239px; height: 480px;" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+<!-- Ads TOP RIGHT MENU BEGIN -->
+<!-- Yandex.RTB R-A-218719-1 -->
+<div id="yandex_rtb_R-A-218719-1"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-218719-1",
+                renderTo: "yandex_rtb_R-A-218719-1",
+                horizontalAlign: false,
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script></tbody>
+                      <tr>
+                        <td style="height: 188px;">
+                        <div id="button">
+                        <table style="width: 221px; height: 164px;" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td><a href="https://www.rapidus.ru/volume-of-cone.html">Объём конуса</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="https://www.rapidus.ru/volume-of-cube.html">Объём куба</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="https://www.rapidus.ru/volume-of-cylinder.html">Объём цилиндра</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="https://www.rapidus.ru/volume-of-parallelepiped.html">Объём параллелепипеда</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="https://www.rapidus.ru/volume-of-piramid.html">Объём пирамиды</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="https://www.rapidus.ru/volume-of-sphere.html">Объём сферы (шара)</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="https://www.rapidus.ru/volume-of-spherical-segment.html">Объём шарового сегмента </a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="height: 367px;">&nbsp;
+                        <p>
+<!-- Ads BOKOVOI BEGIN -->
+<!-- Yandex.RTB R-A-218719-5 -->
+<div id="yandex_rtb_R-A-218719-5"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-218719-5",
+                renderTo: "yandex_rtb_R-A-218719-5",
+                horizontalAlign: false,
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+<!-- Ads BOKOVOI END -->
+                        </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+      <td class="bord-r" align="center" valign="top">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">//<![CDATA[
+    var _tmr = _tmr || [];
+    _tmr.push({id: "1920410", type: "pageView", start: (new Date()).getTime()});
+    (function (d, w) {
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+        ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+        var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window);
+</script>
+</body>
+</html>

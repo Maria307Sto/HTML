@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE shop [
+  <!ENTITY n "Ноутбук">
+  <!ENTITY g "Игра">
+]>
+<shop id="1">
+  <notebooks>
+    <prod>&n; IBM Lenovo V570</prod>
+    <prod>&n; DELL Inspiron N5010</prod>
+  </notebooks>
+  <games>
+    <prod>&g; Готика 2</prod>
+    <prod>&g; Might &amp; Magic 6</prod>
+  </games>
+</shop>

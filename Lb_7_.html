@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="text/css" href="https://img2.freepng.ru/20180526/fai/kisspng-triangle-shapes-background-5b090ab464d440.312492071527319220413.jpg" >
+	<title>Треугольник</title>
+	<meta http-equiv="Content-Language" content="ru">
+<!--  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">-->
+	<style type="text/css">
+    </style>
+    <script type="text/javascript">
+    var a,b,c,x1,x2,x3,y1,y2,y3, R;
+    var s="";
+    function dlina1()
+    {
+    		mTxt= document.getElementById('myText');
+    		mX1 = document.getElementById('textX1');
+    		mY1 = document.getElementById('textY1');
+    		mY2 = document.getElementById('textY2');
+    		mX2 = document.getElementById('textX2');
+    		x1 = mX1.value;
+    		x2 = mX2.value;
+    		y1 = mY1.value;
+    		y2 = mY2.value;
+        a=Math.abs(Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2)));
+        mTxt.value = a;
+          return;
+    }
+    function dlina2()
+    {
+        mTxt1= document.getElementById('myText1');
+        mX2 = document.getElementById('textX2');
+        mY2 = document.getElementById('textY2');
+        mX3 = document.getElementById('textX3');
+        mY3 = document.getElementById('textY3');
+        x2 = mX2.value;
+        x3 = mX3.value;
+        y2 = mY2.value;
+        y3 = mY3.value;
+        b=Math.abs(Math.sqrt(Math.pow((x3-x2),2)+Math.pow((y3-y2),2)));
+        mTxt1.value = b;
+          return;
+    }
+    function dlina3()
+    {     
+        mTxt2= document.getElementById('myText2');
+        mX1 = document.getElementById('textX1');
+        mY1 = document.getElementById('textY1');
+        mX3 = document.getElementById('textX3');
+        mY3 = document.getElementById('textY3');
+        x1 = mX1.value;
+        x3 = mX3.value;
+        y1 = mY1.value;
+        y3 = mY3.value;
+        c=Math.abs(Math.sqrt(Math.pow((x3-x1),2)+Math.pow((y3-y1),2)));
+        mTxt2.value = c;
+          return;
+    }
+   function radius()
+  {
+   mRad= document.getElementById("Radius");
+   mRad1=document.getElementById("Rad1");
+   R= mRad1.value;
+   if(a<=R && b<=R && c<= R)
+   {
+   	document.write("Треугольник лежит внутри окружности радиуса R");
+   }
+   else {
+   document.write("Треугольник не лежит внутри окружности радиуса R");
+ } 
+ return;
+  }
+    </script>
+</head>
+<body bgcolor="#8FBC8F">
+<!--Даны координаты вершин треугольника: (ax, ay), (bx, by), (cx, cy). Определить, лежит ли данный треугольник внутри окружности радиуса R с центром в точке (x0, y0).-->
+<div align="center"><img src="https://ds02.infourok.ru/uploads/ex/00c6/00030e05-3ae6b2c4/img8.jpg" height="300" width="400"></div>
+<h2><p>Чтобы решить данную задачу, необходимо найти длину сторон треугольника. А уже дальше, исходя из длины сторон, сравнить с радиусом. Если все стороны треугольника меньше или равно радиусу, то треугольник находится внутри окружности. А если нет , то выдаётся сообщение о том, что стороны треугольника не входят в окружность с радиусом R. </p></h2>
+<form name="Formula1">
+	<li>Координата- x1: <input id="textX1" type="text" name="x1" value="0" size="10"></li>
+	<br>
+	<li>Координата - y1: <input id="textY1" type="text" name="y1" value="0" size="10"></li>
+	<br>
+	<li>Координата - x2: <input id="textX2" type="text" name="x2" value="0" size="10"></li>
+	<br>
+	<li>Координата - y2: <input id="textY2" type="text" name="y2" value="0" size="10"></li>
+  	<br>
+  	<li>Координата- x3: <input id="textX3" type="text" name="x3" value="0" size="10"></li>
+  	<br>
+  	<li>Координата - y3: <input id="textY3" type="text" name='y3' value="0" size="10"></li>
+	<br><br>
+      <br>
+      <br>
+      <input type="button" name="a" value="Вычислить 1 длину" onClick="dlina1();">
+      <input id="myText" type="text" name="a" value=0 size=10>
+      <br>
+      <br>
+      <input type="button" name="bu" value="Вычислить 2 длину" onClick="dlina2();">
+      <input id="myText1" type="text" name="b" value=0 size=10>
+      <br>
+      <br>
+      <input type="button" name="cu" value="Вычислить 3 длину" onClick="dlina3();">
+      <input id="myText2" type="text" name="c" value=0 size=10>
+      <br><br>
+  	  <li>Введите радиус: <input id="Rad1" type="text" name="mRad" value="0" size="10"></li>
+  	  <br><br>
+  	  <input type="button" name="R" value="Результат" onClick="radius();">
+</form>
+</body>
+</html>

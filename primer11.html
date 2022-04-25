@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Калькулятор 2</title>
+<Style>
+form.POST_CALC_2 {
+    display: block;
+    margin: auto;
+    width: 250px;
+    border: 1px solid #cccccc;
+    padding: 28px;
+}
+form.POST_CALC_2 input[type="number"] {
+    padding: 7px;
+    margin: 4px;
+    width: 220px;
+}	
+form.POST_CALC_2 input[type="submit"] {
+    width: 95%;
+    margin: 5px;
+    padding: 10px;
+}
+form div  {
+    text-align:center;  
+}
+</Style>
+</head>
+<body>
+<red>Результат:</red>
+<br>
+    <form method="POST" action=""  class="POST_CALC_2">
+    <input type="radio" name="operation" value="+">+<br>
+    <input type="radio" name="operation" value="-">-<br>
+    <input type="radio" name="operation" value="/">/<br>
+    <input type="radio" name="operation" value="*">*<br>
+    <input type="number" name="a" required><br>
+    <input type="number" name="b" required><br>
+    <input type="submit" name="button" value="Отправить">
+</form>	
+</body>
+</html>

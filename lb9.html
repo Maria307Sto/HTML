@@ -1,0 +1,66 @@
+<!--Самостоятельно  постройте  регулярное  выражение,  описывающее шаблон  для  проверки  номера  телефона,  
+	и  внесите  все  необходимые изменения и дополнения в функциюCheckData(). -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Лабораторная 9</title>
+	<style type="text/css">
+		body {
+			font-family: Arial, Verdana, Helvetica, sans-serif;
+ 			font-size: 90%;
+ 			background: #90EE90;
+ 			color: black;
+		}
+		* {;}
+    </style>
+	<script type="text/javascript">
+		function CheckDataNumber()
+		{
+			var number;
+			number= confirm("Ваш телефон верно написан? Перепроверьте данные!");
+			if (number) submit();
+		}
+		function clearForm(myFormElement) {
+		var elements = myFormElement.elements;
+		myFormElement.reset();
+		for(i=0; i<elements.length; i++) {
+			field_type = elements[i].type.toLowerCase();
+			switch(field_type) {
+				case "Name":
+				case "Organiz":
+				case "Number":
+				case "email":
+				elements[i].value = "";
+				break;
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+<form name="MyForm">
+	<table>
+	<div align="center"><br><h2>Для регистрации ноебходимо указать ваши персональные данные:</h2></div>
+	<br>
+	<br>
+	<tr align="right"><h2>* Имя:<input type="text" name="Name" value="Введите имя" size="20"></h2>
+</tr>
+<tr align="right"><h2>Организация(компания):<input type="text" name="Organiz" value="Введите наименование организации" size="80"></h2>
+</tr>
+<tr align="right"><h2>* Телефон:
+<form action="" method="post" id="cusCreate" autocomplete="off">
+<input type="tel" name="telphone" placeholder="8-888-888-88-88" pattern="[0-9]{1}[-]{1}[0-9]{3}[-]{1}[0-9]{3}[-]{1}[0-9]{2}[-]{1}[0-9]{2}" maxlength="20"  title="Введите номер телефона правильно! Ten digits code" required/>    
+<label style="font-size:9px;
+      		   padding-left:20px">Eg :8-800-200-30-60</label> 
+ <input type="button" value="Проверить"> </form></h2>
+</tr>
+<tr align="right"><h2>* Адрес эл.почты:<input id="validEMail" type="text" name="email" value="Введите эл.почту" size="50"></h2>
+	<h3>* Поля обязательные для заполенения.</h3>
+</tr>
+<br><br>
+<input type="button" name="ans" value="Отправить" onClick="CheckDataNumber();">
+<input type="button" name="number" value="Очистить экран" onClick="clearForm(MyForm);">
+</table>
+</form>
+</body>
+</html>

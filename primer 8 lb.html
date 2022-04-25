@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Использование массива</title>
+	<style type="text/css">@import:url("ArrayCSS.css");
+</style>
+</head>
+<body>
+	<h1>Использование массива</h1>
+	<hr size="2">
+	<script type="text/javascript">
+		var ar= new Array(1,2,3,4,5);
+		var i;
+		for (i=0; i< ar.length; i++)
+		{document.write("  Array["+i+"]="+ar[i]); document.write("<br>");}
+		document.write("После удаления последнего элемента:<br>");
+		ar.pop();
+		for (i=0; i< ar.length; i++)
+		{document.write("  Array["+i+"]="+ar[i]);document.write("<br>");}
+</script>
+<hr size="2">
+</body>
+</html>

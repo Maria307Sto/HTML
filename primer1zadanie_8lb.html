@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Задача 1 из лб.8 Стоянова</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			//создаем массивы
+			var array1 = [1.23,1.24,1.45,1.34,1.23,1.34,1.56,1.87,2.45,1.56];
+			var	array2 = [1.23,4.56,1.34,5.67,4.56,3.45,2.67,3.56,7.89,5.67];
+			document.write("<br>");	
+			document.write(array1.length);
+			document.write("<br>");	
+			document.write(array2.length);
+			document.write("<br>");	
+			//здесь будем хранить значение элемента
+			var cache;
+			//сохраним длины массивов:
+			var ln1 = array1.length;
+			document.write("<br>");	
+			var	ln2 = array2.length;
+			//теперь делаем цикл
+			for (var i = 0; i < ln1; ++i)
+				{
+				cache = array1[i];
+				
+				for (var j = 0; j < ln2; ++j)
+					{
+					if (cache == array2[j])
+						{
+						document.write("<br>");	
+						document.write('найдено совпадение: ' + cache);
+						document.write("<br>");	
+						break;
+						}
+					}
+				}
+		</script>
+	</body>
+</html>
